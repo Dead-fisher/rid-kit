@@ -40,10 +40,11 @@ def test_ef(sess, xx, cv_dim):
     inputs = graph.get_tensor_by_name('load/inputs:0')
     o_energy = graph.get_tensor_by_name('load/o_energy:0')
     o_forces = graph.get_tensor_by_name('load/o_forces:0')
+    drop_out_rate = graph.get_tensor_by_name('load/drop_out_rate:0')
 
     zero4 = np.zeros([xx.shape[0], cv_dim])
     data_inputs = np.concatenate((xx, zero4), axis=1)
-    feed_dict_test = {inputs: data_inputs}
+    feed_dict_test = {inputs: data_inputs, drop_out_rate: 0.0}
 
     data_ret = sess.run([o_energy, o_forces], feed_dict=feed_dict_test)
     return data_ret[0], data_ret[1]

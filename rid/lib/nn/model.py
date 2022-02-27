@@ -150,7 +150,8 @@ class Model(object):
     def test_error(self, inputs_train):
         ret = self.sess.run([self.l2_loss, self.rel_error_k],
                             feed_dict={self.inputs_train: inputs_train,
-                                       self.is_training: False})
+                                       self.is_training: False,
+                                       self.drop_out_rate: 0.0})
         error = np.sqrt(ret[0])
         error2 = np.mean(np.sqrt(ret[1]))
         return error, error2
@@ -159,12 +160,14 @@ class Model(object):
         data_new, data_old = reader.get_data()
         ret = self.sess.run([self.l2_loss, self.rel_error_k],
                             feed_dict={self.inputs_train: data_new,
-                                       self.is_training: False})
+                                       self.is_training: False,
+                                       self.drop_out_rate: 0.0})
         error_new = np.sqrt(ret[0])
         error_new2 = np.mean(np.sqrt(ret[1]))
         ret = self.sess.run([self.l2_loss, self.rel_error_k],
                             feed_dict={self.inputs_train: data_old,
-                                       self.is_training: False})
+                                       self.is_training: False,
+                                       self.drop_out_rate: 0.0})
         error_old = np.sqrt(ret[0])
         error_old2 = np.mean(np.sqrt(ret[1]))
         return error_new, error_new2, error_old, error_old2
@@ -176,6 +179,7 @@ class Model(object):
         self.inputs_train = tf.placeholder(
             tf_precision, [None, self.n_input + self.cv_dim], name='inputs')
         self.is_training = tf.placeholder(tf.bool)
+        self.drop_out_rate = tf.compat.v1.placeholder(tf.float32, name='drop_out_rate')  ### drop out ###
         self._extra_train_ops = []
         self.global_step = tf.get_variable('global_step', [],
                                            initializer=tf.constant_initializer(
@@ -256,7 +260,8 @@ class Model(object):
             inputs_train = reader.sample_train()
             self.sess.run([self.train_op],
                           feed_dict={self.inputs_train: inputs_train,
-                                     self.is_training: True})
+                                     self.is_training: True,
+                                     self.drop_out_rate: reader.drop_out_rate})
             sample_used += reader.get_batch_size()
             # print(sample_used)
             if (sample_used // reader.get_train_size()) > epoch_used:
@@ -344,7 +349,7 @@ class Model(object):
         else:
             init = None
         layer = self._one_layer(
-            inputs, self.n_neuron[0], name='layer_0', reuse=reuse, init=init)
+            inputs, self.n_neuron[0], name='layer_0', reuse=reuse, init=init, drop_out_rate=self.drop_out_rate)
         for ii in range(1, len(self.n_neuron)):
             if graph is not None:
                 init_t = [graph.get_tensor_by_name('load/layer_%s/matrix:0' % str(ii)),
@@ -360,10 +365,10 @@ class Model(object):
                 init = None
             if self.resnet and self.n_neuron[ii] == self.n_neuron[ii-1]:
                 layer += self._one_layer(layer, self.n_neuron[ii], name='layer_'+str(
-                    ii), reuse=reuse, with_timestep=True, init=init)
+                    ii), reuse=reuse, with_timestep=True, init=init, drop_out_rate=self.drop_out_rate)
             else:
                 layer = self._one_layer(
-                    layer, self.n_neuron[ii], name='layer_'+str(ii), reuse=reuse, with_timestep=False, init=init)
+                    layer, self.n_neuron[ii], name='layer_'+str(ii), reuse=reuse, with_timestep=False, init=init, drop_out_rate=self.drop_out_rate)
         if graph is not None:
             init_t = graph.get_tensor_by_name('load/energy/matrix:0')
             with tf.Session(graph=self.graph) as g_sess:
@@ -417,7 +422,8 @@ class Model(object):
                    name='linear',
                    reuse=None,
                    seed=None,
-                   with_timestep=False):
+                   with_timestep=False,
+                   drop_out_rate=0.5):
         with tf.variable_scope(name, reuse=reuse):
             shape = inputs.get_shape().as_list()
             if init is not None:
@@ -468,18 +474,20 @@ class Model(object):
                 # None
                 hidden_bn = self._batch_norm(
                     hidden, name=name+'_normalization', reuse=reuse)
-                return activation_fn(hidden_bn)
+                layer_out =  activation_fn(hidden_bn)
             else:
                 if with_timestep:
-                    return activation_fn(hidden) * timestep
+                    layer_out = activation_fn(hidden) * timestep
                 else:
-                    return activation_fn(hidden)
+                    layer_out = activation_fn(hidden)
         else:
             if self.useBN:
                 # None
-                return self._batch_norm(hidden, name=name+'_normalization', reuse=reuse)
+                layer_out = self._batch_norm(hidden, name=name+'_normalization', reuse=reuse)
             else:
-                return hidden
+                layer_out = hidden
+        return tf.nn.dropout(layer_out, rate=drop_out_rate)
+
 
     def _final_layer(self,
                      inputs,
