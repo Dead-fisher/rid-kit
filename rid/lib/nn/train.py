@@ -28,6 +28,7 @@ class Config(object):
         self.cv_dim_list = cv_dim_list
         self.cv_dim = sum(self.cv_dim_list)
         self.display_in_training = True
+        self.drop_out_rate = 0.5
 
 
 def reset_batch_size(config):
@@ -46,6 +47,7 @@ def print_conf(config, nthreads):
     print("# use_mix           " + str(config.use_mix))
     print("# old_ratio         " + str(config.old_ratio))
     print("# lr_0              " + str(config.starter_learning_rate))
+    print("# drop out rate     " + str(config.drop_out_rate))
     print("# decay_steps       " + str(config.decay_steps))
     print("# decay_steps_inner " + str(config.decay_steps_inner))
     print("# decay_rate        " + str(config.decay_rate))
@@ -65,7 +67,8 @@ def set_conf(cv_dim_list,
              decay_steps=120,
              decay_rate=0.96,
              old_ratio=7.0,
-             decay_steps_inner=0):
+             decay_steps_inner=0,
+             drop_out_rate=0.5):
     config = Config(cv_dim_list)
     config.n_neuron = neurons
     config.batch_size = batch_size
@@ -78,6 +81,7 @@ def set_conf(cv_dim_list,
     config.decay_rate = decay_rate
     config.restart = restart
     config.resnet = resnet
+    config.drop_out_rate = drop_out_rate
     return config
 
 
@@ -95,7 +99,8 @@ def train(
     decay_rate=0.96,
     old_ratio=7.0,
     decay_steps_inner=0,
-    init_model=None
+    init_model=None,
+    drop_out_rate=0.5
 ):
     config = set_conf(cv_dim_list,
                       neurons=neurons,
@@ -109,7 +114,8 @@ def train(
                       decay_steps=decay_steps,
                       decay_rate=decay_rate,
                       old_ratio=old_ratio,
-                      decay_steps_inner=decay_steps_inner)
+                      decay_steps_inner=decay_steps_inner,
+                      drop_out_rate = drop_out_rate)
     if init_model is not None:
         if config.restart:
             raise RuntimeError(
@@ -159,6 +165,8 @@ def get_parm():
                         help='try using resNet if two neighboring layers are of the same size.')
     parser.add_argument('-i', '--init-model', type=str,
                         help='use this graph to init the weights in the model.')
+    parser.add_argument('-d', '--drop-out-rate', type=float, default=0.5,
+                        help='drop out rate')
     args = parser.parse_args()
     return args
 
@@ -178,6 +186,7 @@ def main():
     config.decay_rate = args.decay_rate
     config.restart = args.restart
     config.resnet = args.resnet
+    config.drop_out_rate = args.drop_out_rate
 
     print("configuration:\n", config.__dict__)
     if args.init_model is not None:

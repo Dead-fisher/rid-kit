@@ -145,6 +145,7 @@ def run_train(iter_index,
     cwd = os.getcwd()
     neurons = jdata["neurons"]
     batch_size = jdata["batch_size"]
+    drop_out_rate = jdata["drop_out_rate"]
     if iter_index < res_iter:
         numb_epoches = jdata["numb_epoches"]
         starter_lr = jdata["starter_lr"]
@@ -170,6 +171,7 @@ def run_train(iter_index,
     cmdl_args += " -b " + str(batch_size)
     cmdl_args += " -e " + str(numb_epoches)
     cmdl_args += " -l " + str(starter_lr)
+    cmdl_args += " -d " + str(drop_out_rate)
     cmdl_args += " --decay-steps " + str(decay_steps)
     cmdl_args += " --decay-rate " + str(decay_rate)
 
