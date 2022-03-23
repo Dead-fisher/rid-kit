@@ -31,6 +31,7 @@ class Reader(object):
         self.batch_size_new = self.batch_size - self.batch_size_old
         self.cv_dim_list = config.cv_dim_list
         self.cv_dim = sum(self.cv_dim_list)
+        self.drop_out_rate = config.drop_out_rate
 
     def prepare(self):
         self.n_input = sum(self.cv_dim_list)
@@ -349,7 +350,7 @@ class Model(object):
         else:
             init = None
         layer = self._one_layer(
-            inputs, self.n_neuron[0], name='layer_0', reuse=reuse, init=init, drop_out_rate=self.drop_out_rate)
+            inputs, self.n_neuron[0], drop_out_rate=self.drop_out_rate, name='layer_0', reuse=reuse, init=init)
         for ii in range(1, len(self.n_neuron)):
             if graph is not None:
                 init_t = [graph.get_tensor_by_name('load/layer_%s/matrix:0' % str(ii)),
@@ -364,11 +365,11 @@ class Model(object):
             else:
                 init = None
             if self.resnet and self.n_neuron[ii] == self.n_neuron[ii-1]:
-                layer += self._one_layer(layer, self.n_neuron[ii], name='layer_'+str(
-                    ii), reuse=reuse, with_timestep=True, init=init, drop_out_rate=self.drop_out_rate)
+                layer += self._one_layer(layer, self.n_neuron[ii], drop_out_rate=self.drop_out_rate, name='layer_'+str(
+                    ii), reuse=reuse, with_timestep=True, init=init)
             else:
                 layer = self._one_layer(
-                    layer, self.n_neuron[ii], name='layer_'+str(ii), reuse=reuse, with_timestep=False, init=init, drop_out_rate=self.drop_out_rate)
+                    layer, self.n_neuron[ii], drop_out_rate=self.drop_out_rate, name='layer_'+str(ii), reuse=reuse, with_timestep=False, init=init)
         if graph is not None:
             init_t = graph.get_tensor_by_name('load/energy/matrix:0')
             with tf.Session(graph=self.graph) as g_sess:
@@ -415,6 +416,7 @@ class Model(object):
     def _one_layer(self,
                    inputs,
                    outputs_size,
+                   drop_out_rate,
                    activation_fn=tf.nn.tanh,
                    stddev=1.0,
                    bavg=0.0,
@@ -422,8 +424,7 @@ class Model(object):
                    name='linear',
                    reuse=None,
                    seed=None,
-                   with_timestep=False,
-                   drop_out_rate=0.5):
+                   with_timestep=False):
         with tf.variable_scope(name, reuse=reuse):
             shape = inputs.get_shape().as_list()
             if init is not None:
