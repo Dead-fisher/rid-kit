@@ -75,7 +75,8 @@ class MergeData(OP):
         return OPIOSign(
             {
                 "data_old": Artifact(Path, optional=True),
-                "data_new": Artifact(Path)
+                "data_new": Artifact(Path),
+                "cv_dim": int
             }
         )
 
@@ -97,7 +98,9 @@ class MergeData(OP):
         if os.stat(op_in["data_new"]).st_size == 0:
             return OPIO({"data_raw": op_in["data_old"]})
         _data_old = load_txt(op_in["data_old"])
+        _data_old = np.reshape(_data_old, [-1, op_in["cv_dim"]*2])
         _data_new = load_txt(op_in["data_new"])
+        _data_new = np.reshape(_data_new, [-1, op_in["cv_dim"]*2])
         data = np.concatenate((_data_old, _data_new), axis=0)
         np.savetxt(data_raw, data, fmt="%.6e")
         op_out = OPIO(
