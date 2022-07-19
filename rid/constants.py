@@ -20,6 +20,7 @@ plumed_input_name = "plumed.dat"
 plumed_bf_input_name = "plumed_bf.dat"
 plumed_restraint_input_name = "plumed_restraint.dat"
 plumed_output_name = "plm.out"
+center_out_name = "centers.out"
 
 # Gromacs file names
 gmx_conf_name = "conf.gro"
