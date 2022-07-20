@@ -10,7 +10,6 @@ from dflow.python import (
     Parameter
     )
 from context import rid
-from mocked_ops import MockedRunExplore
 from rid.op.run_exploration import RunExplore
 from rid.utils import load_txt, save_txt, set_directory
 from pathlib import Path
