@@ -10,9 +10,9 @@ cv_init_label = "cv_init_{idx:d}.out"
 model_devi_name = "model_devi.txt"
 label_task_pattern = "{:03d}"
 force_out = "forces.out"
-data_new = "data.new"
-data_old = "data.old"
-data_raw = "data.raw"
+data_new = "data.new.npy"
+data_old = "data.old.npy"
+data_raw = "data.raw.npy"
 block_tag_fmt = "iter-{idx_iter:03d}"
 
 # PLUMED2 file names

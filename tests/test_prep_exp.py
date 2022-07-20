@@ -9,18 +9,19 @@ from dflow.python import (
     Parameter
     )
 from context import rid
-from rid.op.prep_data import CollectData,MergeData
+from rid.op.prep_exploration import PrepExplore
 from rid.utils import load_txt, save_txt, set_directory
 from pathlib import Path
 from rid.constants import (
-        data_new,
-        data_old,
-        data_raw,
-        force_out,
-        center_out_name
+        explore_task_pattern, 
+        gmx_conf_name,
+        gmx_top_name,
+        gmx_mdp_name, 
+        plumed_input_name,
+        plumed_output_name
     )
 
-class Test_Collectdata(unittest.TestCase):
+class Test_PrepExplore(unittest.TestCase):
     def setUp(self):
         self.datapath = "data"
     
