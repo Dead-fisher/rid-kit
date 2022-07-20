@@ -11,7 +11,6 @@ from dflow.python import (
     )
 from context import rid
 from rid.op.run_select import RunSelect
-from mocked_ops import MockedRunSelect
 from rid.utils import load_txt, save_txt, set_directory
 from pathlib import Path
 import shutil

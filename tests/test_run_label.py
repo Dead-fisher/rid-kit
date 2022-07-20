@@ -11,7 +11,6 @@ from dflow.python import (
     )
 from context import rid
 from rid.op.run_label import RunLabel
-from mocked_ops import MockedRunLabel
 from rid.utils import load_txt, save_txt, set_directory
 from pathlib import Path
 import shutil
