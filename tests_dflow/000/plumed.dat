@@ -1,4 +1,0 @@
-dih-002-00: TORSION ATOMS=5,7,9,15
-dih-002-01: TORSION ATOMS=7,9,15,17
-dpfe: DEEPFE TRUST_LVL_1=2 TRUST_LVL_2=3 MODEL=test_exploration/graph.000.pb,test_exploration/graph.001.pb,test_exploration/graph.002.pb ARG=dih-002-00,dih-002-01
-PRINT STRIDE=10 ARG=dih-002-00,dih-002-01 FILE=plm.out

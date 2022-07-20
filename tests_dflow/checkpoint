@@ -1,2 +1,0 @@
-model_checkpoint_path: "/mnt/vepfs/yanze/dflow_project/rid-kit/tests/model.ckpt"
-all_model_checkpoint_paths: "/mnt/vepfs/yanze/dflow_project/rid-kit/tests/model.ckpt"
