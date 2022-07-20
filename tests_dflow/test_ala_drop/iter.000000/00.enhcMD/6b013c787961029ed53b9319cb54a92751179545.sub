@@ -1,0 +1,35 @@
+#!/bin/bash -l
+#SBATCH --parsable
+#SBATCH --nodes 1
+#SBATCH --ntasks-per-node 8
+#SBATCH --gres=gpu:1
+#SBATCH --partition GPU_2080Ti
+
+
+REMOTE_ROOT=/home/dongdong/wyz/rid-kit/examples/test_ala_drop/iter.000000/00.enhcMD/
+echo 0 > $REMOTE_ROOT/6b013c787961029ed53b9319cb54a92751179545_flag_if_job_task_fail
+test $? -ne 0 && exit 1
+
+
+
+
+
+
+
+cd $REMOTE_ROOT
+cd 001
+test $? -ne 0 && exit 1
+if [ ! -f 750af9f40ecb3985df911ea110c7dbda13fdeca6_task_tag_finished ] ;then
+   ( gmx mdrun -ntmpi 1 -nt 8 -plumed plumed.bf.dat 1> gmx_mdrun.log 2> gmx_mdrun.log ) 1>>gmx_mdrun.log 2>>gmx_mdrun.log 
+  if test $? -eq 0; then touch 750af9f40ecb3985df911ea110c7dbda13fdeca6_task_tag_finished; else echo 1 > $REMOTE_ROOT/6b013c787961029ed53b9319cb54a92751179545_flag_if_job_task_fail;fi
+fi &
+wait 
+
+
+cd $REMOTE_ROOT
+test $? -ne 0 && exit 1
+
+wait
+FLAG_IF_JOB_TASK_FAIL=$(cat 6b013c787961029ed53b9319cb54a92751179545_flag_if_job_task_fail)
+if test $FLAG_IF_JOB_TASK_FAIL -eq 0; then touch 6b013c787961029ed53b9319cb54a92751179545_job_tag_finished; else exit 1;fi
+

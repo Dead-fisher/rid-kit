@@ -1,0 +1,295 @@
+{
+    "work_base": "/home/dongdong/wyz/rid-kit/examples/test_ala_drop/iter.000000/01.resMD/",
+    "machine": {
+        "batch_type": "Shell",
+        "context_type": "LazyLocalContext",
+        "local_root": "./",
+        "remote_root": "./",
+        "remote_profile": {}
+    },
+    "resources": {
+        "number_node": 1,
+        "cpu_per_node": 1,
+        "gpu_per_node": 0,
+        "queue_name": "shell",
+        "group_size": 1000,
+        "custom_flags": [],
+        "strategy": {
+            "if_cuda_multi_devices": false,
+            "ratio_unfinished": 0.0
+        },
+        "para_deg": 1,
+        "module_purge": false,
+        "module_unload_list": [],
+        "module_list": [],
+        "source_list": [],
+        "envs": {},
+        "wait_time": 0,
+        "kwargs": {}
+    },
+    "forward_common_files": [],
+    "backward_common_files": [],
+    "belonging_jobs": [
+        {
+            "cdcedfafb6fdfb6ec941389a5a6bbed29a7b8efc": {
+                "job_task_list": [
+                    {
+                        "command": "python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2",
+                        "task_work_path": "001.000012",
+                        "forward_files": [],
+                        "backward_files": [],
+                        "outlog": "cmpf.log",
+                        "errlog": "cmpf.log"
+                    },
+                    {
+                        "command": "python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2",
+                        "task_work_path": "000.000937",
+                        "forward_files": [],
+                        "backward_files": [],
+                        "outlog": "cmpf.log",
+                        "errlog": "cmpf.log"
+                    },
+                    {
+                        "command": "python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2",
+                        "task_work_path": "000.000862",
+                        "forward_files": [],
+                        "backward_files": [],
+                        "outlog": "cmpf.log",
+                        "errlog": "cmpf.log"
+                    },
+                    {
+                        "command": "python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2",
+                        "task_work_path": "001.000738",
+                        "forward_files": [],
+                        "backward_files": [],
+                        "outlog": "cmpf.log",
+                        "errlog": "cmpf.log"
+                    },
+                    {
+                        "command": "python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2",
+                        "task_work_path": "001.000713",
+                        "forward_files": [],
+                        "backward_files": [],
+                        "outlog": "cmpf.log",
+                        "errlog": "cmpf.log"
+                    },
+                    {
+                        "command": "python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2",
+                        "task_work_path": "000.000450",
+                        "forward_files": [],
+                        "backward_files": [],
+                        "outlog": "cmpf.log",
+                        "errlog": "cmpf.log"
+                    },
+                    {
+                        "command": "python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2",
+                        "task_work_path": "000.000416",
+                        "forward_files": [],
+                        "backward_files": [],
+                        "outlog": "cmpf.log",
+                        "errlog": "cmpf.log"
+                    },
+                    {
+                        "command": "python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2",
+                        "task_work_path": "000.000885",
+                        "forward_files": [],
+                        "backward_files": [],
+                        "outlog": "cmpf.log",
+                        "errlog": "cmpf.log"
+                    },
+                    {
+                        "command": "python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2",
+                        "task_work_path": "000.000883",
+                        "forward_files": [],
+                        "backward_files": [],
+                        "outlog": "cmpf.log",
+                        "errlog": "cmpf.log"
+                    },
+                    {
+                        "command": "python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2",
+                        "task_work_path": "000.000974",
+                        "forward_files": [],
+                        "backward_files": [],
+                        "outlog": "cmpf.log",
+                        "errlog": "cmpf.log"
+                    },
+                    {
+                        "command": "python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2",
+                        "task_work_path": "000.000859",
+                        "forward_files": [],
+                        "backward_files": [],
+                        "outlog": "cmpf.log",
+                        "errlog": "cmpf.log"
+                    },
+                    {
+                        "command": "python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2",
+                        "task_work_path": "001.000795",
+                        "forward_files": [],
+                        "backward_files": [],
+                        "outlog": "cmpf.log",
+                        "errlog": "cmpf.log"
+                    },
+                    {
+                        "command": "python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2",
+                        "task_work_path": "001.000634",
+                        "forward_files": [],
+                        "backward_files": [],
+                        "outlog": "cmpf.log",
+                        "errlog": "cmpf.log"
+                    },
+                    {
+                        "command": "python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2",
+                        "task_work_path": "001.000978",
+                        "forward_files": [],
+                        "backward_files": [],
+                        "outlog": "cmpf.log",
+                        "errlog": "cmpf.log"
+                    },
+                    {
+                        "command": "python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2",
+                        "task_work_path": "000.000977",
+                        "forward_files": [],
+                        "backward_files": [],
+                        "outlog": "cmpf.log",
+                        "errlog": "cmpf.log"
+                    },
+                    {
+                        "command": "python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2",
+                        "task_work_path": "001.000864",
+                        "forward_files": [],
+                        "backward_files": [],
+                        "outlog": "cmpf.log",
+                        "errlog": "cmpf.log"
+                    },
+                    {
+                        "command": "python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2",
+                        "task_work_path": "000.000128",
+                        "forward_files": [],
+                        "backward_files": [],
+                        "outlog": "cmpf.log",
+                        "errlog": "cmpf.log"
+                    },
+                    {
+                        "command": "python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2",
+                        "task_work_path": "000.000933",
+                        "forward_files": [],
+                        "backward_files": [],
+                        "outlog": "cmpf.log",
+                        "errlog": "cmpf.log"
+                    },
+                    {
+                        "command": "python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2",
+                        "task_work_path": "000.000207",
+                        "forward_files": [],
+                        "backward_files": [],
+                        "outlog": "cmpf.log",
+                        "errlog": "cmpf.log"
+                    },
+                    {
+                        "command": "python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2",
+                        "task_work_path": "001.000000",
+                        "forward_files": [],
+                        "backward_files": [],
+                        "outlog": "cmpf.log",
+                        "errlog": "cmpf.log"
+                    },
+                    {
+                        "command": "python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2",
+                        "task_work_path": "001.000975",
+                        "forward_files": [],
+                        "backward_files": [],
+                        "outlog": "cmpf.log",
+                        "errlog": "cmpf.log"
+                    },
+                    {
+                        "command": "python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2",
+                        "task_work_path": "000.000335",
+                        "forward_files": [],
+                        "backward_files": [],
+                        "outlog": "cmpf.log",
+                        "errlog": "cmpf.log"
+                    },
+                    {
+                        "command": "python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2",
+                        "task_work_path": "001.000800",
+                        "forward_files": [],
+                        "backward_files": [],
+                        "outlog": "cmpf.log",
+                        "errlog": "cmpf.log"
+                    },
+                    {
+                        "command": "python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2",
+                        "task_work_path": "000.000649",
+                        "forward_files": [],
+                        "backward_files": [],
+                        "outlog": "cmpf.log",
+                        "errlog": "cmpf.log"
+                    },
+                    {
+                        "command": "python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2",
+                        "task_work_path": "000.000807",
+                        "forward_files": [],
+                        "backward_files": [],
+                        "outlog": "cmpf.log",
+                        "errlog": "cmpf.log"
+                    },
+                    {
+                        "command": "python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2",
+                        "task_work_path": "001.000787",
+                        "forward_files": [],
+                        "backward_files": [],
+                        "outlog": "cmpf.log",
+                        "errlog": "cmpf.log"
+                    },
+                    {
+                        "command": "python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2",
+                        "task_work_path": "000.000042",
+                        "forward_files": [],
+                        "backward_files": [],
+                        "outlog": "cmpf.log",
+                        "errlog": "cmpf.log"
+                    },
+                    {
+                        "command": "python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2",
+                        "task_work_path": "000.000280",
+                        "forward_files": [],
+                        "backward_files": [],
+                        "outlog": "cmpf.log",
+                        "errlog": "cmpf.log"
+                    },
+                    {
+                        "command": "python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2",
+                        "task_work_path": "001.000669",
+                        "forward_files": [],
+                        "backward_files": [],
+                        "outlog": "cmpf.log",
+                        "errlog": "cmpf.log"
+                    }
+                ],
+                "resources": {
+                    "number_node": 1,
+                    "cpu_per_node": 1,
+                    "gpu_per_node": 0,
+                    "queue_name": "shell",
+                    "group_size": 1000,
+                    "custom_flags": [],
+                    "strategy": {
+                        "if_cuda_multi_devices": false,
+                        "ratio_unfinished": 0.0
+                    },
+                    "para_deg": 1,
+                    "module_purge": false,
+                    "module_unload_list": [],
+                    "module_list": [],
+                    "source_list": [],
+                    "envs": {},
+                    "wait_time": 0,
+                    "kwargs": {}
+                },
+                "job_state": 5,
+                "job_id": 317896,
+                "fail_count": 0
+            }
+        }
+    ]
+}

@@ -1,0 +1,108 @@
+{
+    "work_base": "/home/dongdong/wyz/rid-kit/examples/test_ala_drop/iter.000000/00.enhcMD/",
+    "machine": {
+        "batch_type": "Slurm",
+        "context_type": "LazyLocalContext",
+        "local_root": "./",
+        "remote_root": "./",
+        "remote_profile": {}
+    },
+    "resources": {
+        "number_node": 1,
+        "cpu_per_node": 8,
+        "gpu_per_node": 1,
+        "queue_name": "GPU_2080Ti",
+        "group_size": 1,
+        "custom_flags": [],
+        "strategy": {
+            "if_cuda_multi_devices": false,
+            "ratio_unfinished": 0.0
+        },
+        "para_deg": 1,
+        "module_purge": false,
+        "module_unload_list": [],
+        "module_list": [],
+        "source_list": [],
+        "envs": {},
+        "wait_time": 0,
+        "kwargs": {}
+    },
+    "forward_common_files": [],
+    "backward_common_files": [],
+    "belonging_jobs": [
+        {
+            "374e1139ad777825909f21f071d9ad0e7301934d": {
+                "job_task_list": [
+                    {
+                        "command": "gmx grompp -maxwarn 1 1> gmx_grompp.log 2> gmx_grompp.log",
+                        "task_work_path": "001",
+                        "forward_files": [],
+                        "backward_files": [],
+                        "outlog": "gmx_grompp.log",
+                        "errlog": "gmx_grompp.log"
+                    }
+                ],
+                "resources": {
+                    "number_node": 1,
+                    "cpu_per_node": 8,
+                    "gpu_per_node": 1,
+                    "queue_name": "GPU_2080Ti",
+                    "group_size": 1,
+                    "custom_flags": [],
+                    "strategy": {
+                        "if_cuda_multi_devices": false,
+                        "ratio_unfinished": 0.0
+                    },
+                    "para_deg": 1,
+                    "module_purge": false,
+                    "module_unload_list": [],
+                    "module_list": [],
+                    "source_list": [],
+                    "envs": {},
+                    "wait_time": 0,
+                    "kwargs": {}
+                },
+                "job_state": 5,
+                "job_id": "200553",
+                "fail_count": 0
+            }
+        },
+        {
+            "2d9edb6b52cdfa22702b63aa62aeec9b08fc5043": {
+                "job_task_list": [
+                    {
+                        "command": "gmx grompp -maxwarn 1 1> gmx_grompp.log 2> gmx_grompp.log",
+                        "task_work_path": "000",
+                        "forward_files": [],
+                        "backward_files": [],
+                        "outlog": "gmx_grompp.log",
+                        "errlog": "gmx_grompp.log"
+                    }
+                ],
+                "resources": {
+                    "number_node": 1,
+                    "cpu_per_node": 8,
+                    "gpu_per_node": 1,
+                    "queue_name": "GPU_2080Ti",
+                    "group_size": 1,
+                    "custom_flags": [],
+                    "strategy": {
+                        "if_cuda_multi_devices": false,
+                        "ratio_unfinished": 0.0
+                    },
+                    "para_deg": 1,
+                    "module_purge": false,
+                    "module_unload_list": [],
+                    "module_list": [],
+                    "source_list": [],
+                    "envs": {},
+                    "wait_time": 0,
+                    "kwargs": {}
+                },
+                "job_state": 5,
+                "job_id": "200554",
+                "fail_count": 0
+            }
+        }
+    ]
+}

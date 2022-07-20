@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/dongdong/wyz/rid-kit/examples/test_ala_drop/iter.000000/02.train/001/model.ckpt"
+all_model_checkpoint_paths: "/home/dongdong/wyz/rid-kit/examples/test_ala_drop/iter.000000/02.train/001/model.ckpt"

@@ -1,0 +1,284 @@
+
+#!/bin/bash -l
+
+
+
+REMOTE_ROOT=/home/dongdong/wyz/rid-kit/examples/test_ala_drop/iter.000000/01.resMD/
+echo 0 > $REMOTE_ROOT/cdcedfafb6fdfb6ec941389a5a6bbed29a7b8efc_flag_if_job_task_fail
+test $? -ne 0 && exit 1
+
+
+
+
+
+
+
+cd $REMOTE_ROOT
+cd 001.000012
+test $? -ne 0 && exit 1
+if [ ! -f 6af82693e688e8cf5a60c6fc398152b17b5f4924_task_tag_finished ] ;then
+   ( python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2 ) 1>>cmpf.log 2>>cmpf.log 
+  if test $? -eq 0; then touch 6af82693e688e8cf5a60c6fc398152b17b5f4924_task_tag_finished; else echo 1 > $REMOTE_ROOT/cdcedfafb6fdfb6ec941389a5a6bbed29a7b8efc_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 000.000937
+test $? -ne 0 && exit 1
+if [ ! -f ad944773ab1167333b25a45a03ac8f0436ad3768_task_tag_finished ] ;then
+   ( python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2 ) 1>>cmpf.log 2>>cmpf.log 
+  if test $? -eq 0; then touch ad944773ab1167333b25a45a03ac8f0436ad3768_task_tag_finished; else echo 1 > $REMOTE_ROOT/cdcedfafb6fdfb6ec941389a5a6bbed29a7b8efc_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 000.000862
+test $? -ne 0 && exit 1
+if [ ! -f 7eb907b71cd04485c7635b53b640089488429a76_task_tag_finished ] ;then
+   ( python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2 ) 1>>cmpf.log 2>>cmpf.log 
+  if test $? -eq 0; then touch 7eb907b71cd04485c7635b53b640089488429a76_task_tag_finished; else echo 1 > $REMOTE_ROOT/cdcedfafb6fdfb6ec941389a5a6bbed29a7b8efc_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 001.000738
+test $? -ne 0 && exit 1
+if [ ! -f 8c55cb360f65a7eeabecba1e03302facbcd4264d_task_tag_finished ] ;then
+   ( python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2 ) 1>>cmpf.log 2>>cmpf.log 
+  if test $? -eq 0; then touch 8c55cb360f65a7eeabecba1e03302facbcd4264d_task_tag_finished; else echo 1 > $REMOTE_ROOT/cdcedfafb6fdfb6ec941389a5a6bbed29a7b8efc_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 001.000713
+test $? -ne 0 && exit 1
+if [ ! -f a9108d9845fd8ff67fbbc7fa03a0c9e728aba613_task_tag_finished ] ;then
+   ( python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2 ) 1>>cmpf.log 2>>cmpf.log 
+  if test $? -eq 0; then touch a9108d9845fd8ff67fbbc7fa03a0c9e728aba613_task_tag_finished; else echo 1 > $REMOTE_ROOT/cdcedfafb6fdfb6ec941389a5a6bbed29a7b8efc_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 000.000450
+test $? -ne 0 && exit 1
+if [ ! -f 851e81cdae30472608d48cccb2ca5e6d69347fb4_task_tag_finished ] ;then
+   ( python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2 ) 1>>cmpf.log 2>>cmpf.log 
+  if test $? -eq 0; then touch 851e81cdae30472608d48cccb2ca5e6d69347fb4_task_tag_finished; else echo 1 > $REMOTE_ROOT/cdcedfafb6fdfb6ec941389a5a6bbed29a7b8efc_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 000.000416
+test $? -ne 0 && exit 1
+if [ ! -f b9e3323e26927db75b2d379b769d8bebe7995c07_task_tag_finished ] ;then
+   ( python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2 ) 1>>cmpf.log 2>>cmpf.log 
+  if test $? -eq 0; then touch b9e3323e26927db75b2d379b769d8bebe7995c07_task_tag_finished; else echo 1 > $REMOTE_ROOT/cdcedfafb6fdfb6ec941389a5a6bbed29a7b8efc_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 000.000885
+test $? -ne 0 && exit 1
+if [ ! -f 8398f9ebe6b8d76965d7a6a716aeddf1955c3819_task_tag_finished ] ;then
+   ( python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2 ) 1>>cmpf.log 2>>cmpf.log 
+  if test $? -eq 0; then touch 8398f9ebe6b8d76965d7a6a716aeddf1955c3819_task_tag_finished; else echo 1 > $REMOTE_ROOT/cdcedfafb6fdfb6ec941389a5a6bbed29a7b8efc_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 000.000883
+test $? -ne 0 && exit 1
+if [ ! -f 7242e2bffd502e13063179c65a34752896565865_task_tag_finished ] ;then
+   ( python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2 ) 1>>cmpf.log 2>>cmpf.log 
+  if test $? -eq 0; then touch 7242e2bffd502e13063179c65a34752896565865_task_tag_finished; else echo 1 > $REMOTE_ROOT/cdcedfafb6fdfb6ec941389a5a6bbed29a7b8efc_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 000.000974
+test $? -ne 0 && exit 1
+if [ ! -f f3759e123c628a4982e276b805b85e2d921e9063_task_tag_finished ] ;then
+   ( python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2 ) 1>>cmpf.log 2>>cmpf.log 
+  if test $? -eq 0; then touch f3759e123c628a4982e276b805b85e2d921e9063_task_tag_finished; else echo 1 > $REMOTE_ROOT/cdcedfafb6fdfb6ec941389a5a6bbed29a7b8efc_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 000.000859
+test $? -ne 0 && exit 1
+if [ ! -f aebad7d1829a9e9b5e333170453f2098708bef94_task_tag_finished ] ;then
+   ( python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2 ) 1>>cmpf.log 2>>cmpf.log 
+  if test $? -eq 0; then touch aebad7d1829a9e9b5e333170453f2098708bef94_task_tag_finished; else echo 1 > $REMOTE_ROOT/cdcedfafb6fdfb6ec941389a5a6bbed29a7b8efc_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 001.000795
+test $? -ne 0 && exit 1
+if [ ! -f ce43003f0d5b26295380424972980ce4f626beee_task_tag_finished ] ;then
+   ( python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2 ) 1>>cmpf.log 2>>cmpf.log 
+  if test $? -eq 0; then touch ce43003f0d5b26295380424972980ce4f626beee_task_tag_finished; else echo 1 > $REMOTE_ROOT/cdcedfafb6fdfb6ec941389a5a6bbed29a7b8efc_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 001.000634
+test $? -ne 0 && exit 1
+if [ ! -f caab13f6708b1f2a66e7cf29b17fdfd6eef406c0_task_tag_finished ] ;then
+   ( python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2 ) 1>>cmpf.log 2>>cmpf.log 
+  if test $? -eq 0; then touch caab13f6708b1f2a66e7cf29b17fdfd6eef406c0_task_tag_finished; else echo 1 > $REMOTE_ROOT/cdcedfafb6fdfb6ec941389a5a6bbed29a7b8efc_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 001.000978
+test $? -ne 0 && exit 1
+if [ ! -f ea821e7164bdb077bab4d87a35c3e094a299e750_task_tag_finished ] ;then
+   ( python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2 ) 1>>cmpf.log 2>>cmpf.log 
+  if test $? -eq 0; then touch ea821e7164bdb077bab4d87a35c3e094a299e750_task_tag_finished; else echo 1 > $REMOTE_ROOT/cdcedfafb6fdfb6ec941389a5a6bbed29a7b8efc_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 000.000977
+test $? -ne 0 && exit 1
+if [ ! -f b024d59452a08f3540e280c0121b32c4d8d09c0f_task_tag_finished ] ;then
+   ( python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2 ) 1>>cmpf.log 2>>cmpf.log 
+  if test $? -eq 0; then touch b024d59452a08f3540e280c0121b32c4d8d09c0f_task_tag_finished; else echo 1 > $REMOTE_ROOT/cdcedfafb6fdfb6ec941389a5a6bbed29a7b8efc_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 001.000864
+test $? -ne 0 && exit 1
+if [ ! -f 717e9a169fdd6c991ff25c67f7b89e47301e8f14_task_tag_finished ] ;then
+   ( python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2 ) 1>>cmpf.log 2>>cmpf.log 
+  if test $? -eq 0; then touch 717e9a169fdd6c991ff25c67f7b89e47301e8f14_task_tag_finished; else echo 1 > $REMOTE_ROOT/cdcedfafb6fdfb6ec941389a5a6bbed29a7b8efc_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 000.000128
+test $? -ne 0 && exit 1
+if [ ! -f d490508b897ae598c12eb41a7e3a898341e7f225_task_tag_finished ] ;then
+   ( python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2 ) 1>>cmpf.log 2>>cmpf.log 
+  if test $? -eq 0; then touch d490508b897ae598c12eb41a7e3a898341e7f225_task_tag_finished; else echo 1 > $REMOTE_ROOT/cdcedfafb6fdfb6ec941389a5a6bbed29a7b8efc_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 000.000933
+test $? -ne 0 && exit 1
+if [ ! -f 44b359fa325cc4120cd501c14ff54b6a92cda61c_task_tag_finished ] ;then
+   ( python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2 ) 1>>cmpf.log 2>>cmpf.log 
+  if test $? -eq 0; then touch 44b359fa325cc4120cd501c14ff54b6a92cda61c_task_tag_finished; else echo 1 > $REMOTE_ROOT/cdcedfafb6fdfb6ec941389a5a6bbed29a7b8efc_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 000.000207
+test $? -ne 0 && exit 1
+if [ ! -f cbade8057fc08aac38e0554f8956d2c73fa69480_task_tag_finished ] ;then
+   ( python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2 ) 1>>cmpf.log 2>>cmpf.log 
+  if test $? -eq 0; then touch cbade8057fc08aac38e0554f8956d2c73fa69480_task_tag_finished; else echo 1 > $REMOTE_ROOT/cdcedfafb6fdfb6ec941389a5a6bbed29a7b8efc_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 001.000000
+test $? -ne 0 && exit 1
+if [ ! -f 05fa6044ae3049e4bfb89bd8147e6447146edf89_task_tag_finished ] ;then
+   ( python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2 ) 1>>cmpf.log 2>>cmpf.log 
+  if test $? -eq 0; then touch 05fa6044ae3049e4bfb89bd8147e6447146edf89_task_tag_finished; else echo 1 > $REMOTE_ROOT/cdcedfafb6fdfb6ec941389a5a6bbed29a7b8efc_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 001.000975
+test $? -ne 0 && exit 1
+if [ ! -f 1c5c3c97bb2dd42eb9b79672acc8b765fb59b86b_task_tag_finished ] ;then
+   ( python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2 ) 1>>cmpf.log 2>>cmpf.log 
+  if test $? -eq 0; then touch 1c5c3c97bb2dd42eb9b79672acc8b765fb59b86b_task_tag_finished; else echo 1 > $REMOTE_ROOT/cdcedfafb6fdfb6ec941389a5a6bbed29a7b8efc_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 000.000335
+test $? -ne 0 && exit 1
+if [ ! -f ac85a5cefc2d93e300adcec9434882c7dfc13788_task_tag_finished ] ;then
+   ( python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2 ) 1>>cmpf.log 2>>cmpf.log 
+  if test $? -eq 0; then touch ac85a5cefc2d93e300adcec9434882c7dfc13788_task_tag_finished; else echo 1 > $REMOTE_ROOT/cdcedfafb6fdfb6ec941389a5a6bbed29a7b8efc_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 001.000800
+test $? -ne 0 && exit 1
+if [ ! -f d3aacf67506e95fc489208a6a123d9f8828b1086_task_tag_finished ] ;then
+   ( python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2 ) 1>>cmpf.log 2>>cmpf.log 
+  if test $? -eq 0; then touch d3aacf67506e95fc489208a6a123d9f8828b1086_task_tag_finished; else echo 1 > $REMOTE_ROOT/cdcedfafb6fdfb6ec941389a5a6bbed29a7b8efc_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 000.000649
+test $? -ne 0 && exit 1
+if [ ! -f a9815315f1dbd302fc040a2d78003c529bfa8c8a_task_tag_finished ] ;then
+   ( python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2 ) 1>>cmpf.log 2>>cmpf.log 
+  if test $? -eq 0; then touch a9815315f1dbd302fc040a2d78003c529bfa8c8a_task_tag_finished; else echo 1 > $REMOTE_ROOT/cdcedfafb6fdfb6ec941389a5a6bbed29a7b8efc_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 000.000807
+test $? -ne 0 && exit 1
+if [ ! -f 8522ce9d944e88bfb0e5fcb6dab750f9cc9b2498_task_tag_finished ] ;then
+   ( python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2 ) 1>>cmpf.log 2>>cmpf.log 
+  if test $? -eq 0; then touch 8522ce9d944e88bfb0e5fcb6dab750f9cc9b2498_task_tag_finished; else echo 1 > $REMOTE_ROOT/cdcedfafb6fdfb6ec941389a5a6bbed29a7b8efc_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 001.000787
+test $? -ne 0 && exit 1
+if [ ! -f a03365e9e82a2ef38538b1f232edca6a7dd39ef2_task_tag_finished ] ;then
+   ( python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2 ) 1>>cmpf.log 2>>cmpf.log 
+  if test $? -eq 0; then touch a03365e9e82a2ef38538b1f232edca6a7dd39ef2_task_tag_finished; else echo 1 > $REMOTE_ROOT/cdcedfafb6fdfb6ec941389a5a6bbed29a7b8efc_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 000.000042
+test $? -ne 0 && exit 1
+if [ ! -f 7d3211de1bd6f2a593f5c6a3407e24376fc742e0_task_tag_finished ] ;then
+   ( python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2 ) 1>>cmpf.log 2>>cmpf.log 
+  if test $? -eq 0; then touch 7d3211de1bd6f2a593f5c6a3407e24376fc742e0_task_tag_finished; else echo 1 > $REMOTE_ROOT/cdcedfafb6fdfb6ec941389a5a6bbed29a7b8efc_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 000.000280
+test $? -ne 0 && exit 1
+if [ ! -f ab56368c8dcd51a0641bd61a59d1d27f2128b779_task_tag_finished ] ;then
+   ( python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2 ) 1>>cmpf.log 2>>cmpf.log 
+  if test $? -eq 0; then touch ab56368c8dcd51a0641bd61a59d1d27f2128b779_task_tag_finished; else echo 1 > $REMOTE_ROOT/cdcedfafb6fdfb6ec941389a5a6bbed29a7b8efc_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 001.000669
+test $? -ne 0 && exit 1
+if [ ! -f 5b1d36c9b9782747f1a27c1f6a989490dec92174_task_tag_finished ] ;then
+   ( python3 /home/dongdong/software/anaconda3/envs/gromacs-dp-rid/lib/python3.6/site-packages/rid-0.0.0-py3.6.egg/rid/lib/cmpf.py -c 2 ) 1>>cmpf.log 2>>cmpf.log 
+  if test $? -eq 0; then touch 5b1d36c9b9782747f1a27c1f6a989490dec92174_task_tag_finished; else echo 1 > $REMOTE_ROOT/cdcedfafb6fdfb6ec941389a5a6bbed29a7b8efc_flag_if_job_task_fail;fi
+fi &
+wait 
+
+
+cd $REMOTE_ROOT
+test $? -ne 0 && exit 1
+
+wait
+FLAG_IF_JOB_TASK_FAIL=$(cat cdcedfafb6fdfb6ec941389a5a6bbed29a7b8efc_flag_if_job_task_fail)
+if test $FLAG_IF_JOB_TASK_FAIL -eq 0; then touch cdcedfafb6fdfb6ec941389a5a6bbed29a7b8efc_job_tag_finished; else exit 1;fi
+

@@ -1,0 +1,116 @@
+#!/bin/bash -l
+#SBATCH --parsable
+#SBATCH --nodes 1
+#SBATCH --ntasks-per-node 8
+#SBATCH --gres=gpu:1
+#SBATCH --partition GPU_2080Ti
+
+
+REMOTE_ROOT=/home/dongdong/wyz/rid-kit/examples/test_ala_drop/iter.000000/01.resMD/
+echo 0 > $REMOTE_ROOT/39311cb4a536a5f13a8a53f6c5465d893eb88a2c_flag_if_job_task_fail
+test $? -ne 0 && exit 1
+
+
+
+
+
+
+
+cd $REMOTE_ROOT
+cd 001.000012
+test $? -ne 0 && exit 1
+if [ ! -f 70e5a711bc27c7d42f284ec465bd7de4004985d9_task_tag_finished ] ;then
+   ( gmx grompp -maxwarn 1 1> gmx_grompp.log 2> gmx_grompp.log ) 1>>gmx_grompp.log 2>>gmx_grompp.log 
+  if test $? -eq 0; then touch 70e5a711bc27c7d42f284ec465bd7de4004985d9_task_tag_finished; else echo 1 > $REMOTE_ROOT/39311cb4a536a5f13a8a53f6c5465d893eb88a2c_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 000.000937
+test $? -ne 0 && exit 1
+if [ ! -f 428aa559deb3dbe8b3e356a013a9815bc9f42e2b_task_tag_finished ] ;then
+   ( gmx grompp -maxwarn 1 1> gmx_grompp.log 2> gmx_grompp.log ) 1>>gmx_grompp.log 2>>gmx_grompp.log 
+  if test $? -eq 0; then touch 428aa559deb3dbe8b3e356a013a9815bc9f42e2b_task_tag_finished; else echo 1 > $REMOTE_ROOT/39311cb4a536a5f13a8a53f6c5465d893eb88a2c_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 000.000862
+test $? -ne 0 && exit 1
+if [ ! -f 78bea2d3d4928b8eed4165eb08c7e7d5020685bc_task_tag_finished ] ;then
+   ( gmx grompp -maxwarn 1 1> gmx_grompp.log 2> gmx_grompp.log ) 1>>gmx_grompp.log 2>>gmx_grompp.log 
+  if test $? -eq 0; then touch 78bea2d3d4928b8eed4165eb08c7e7d5020685bc_task_tag_finished; else echo 1 > $REMOTE_ROOT/39311cb4a536a5f13a8a53f6c5465d893eb88a2c_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 001.000738
+test $? -ne 0 && exit 1
+if [ ! -f 6672cc62a1dbf884baf226899a9100981d6dd1b7_task_tag_finished ] ;then
+   ( gmx grompp -maxwarn 1 1> gmx_grompp.log 2> gmx_grompp.log ) 1>>gmx_grompp.log 2>>gmx_grompp.log 
+  if test $? -eq 0; then touch 6672cc62a1dbf884baf226899a9100981d6dd1b7_task_tag_finished; else echo 1 > $REMOTE_ROOT/39311cb4a536a5f13a8a53f6c5465d893eb88a2c_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 001.000713
+test $? -ne 0 && exit 1
+if [ ! -f 374321352895e1c96a9d9394e917846d1212916f_task_tag_finished ] ;then
+   ( gmx grompp -maxwarn 1 1> gmx_grompp.log 2> gmx_grompp.log ) 1>>gmx_grompp.log 2>>gmx_grompp.log 
+  if test $? -eq 0; then touch 374321352895e1c96a9d9394e917846d1212916f_task_tag_finished; else echo 1 > $REMOTE_ROOT/39311cb4a536a5f13a8a53f6c5465d893eb88a2c_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 000.000450
+test $? -ne 0 && exit 1
+if [ ! -f e986514f84a76f4a44dfd11011a0e4468647e69b_task_tag_finished ] ;then
+   ( gmx grompp -maxwarn 1 1> gmx_grompp.log 2> gmx_grompp.log ) 1>>gmx_grompp.log 2>>gmx_grompp.log 
+  if test $? -eq 0; then touch e986514f84a76f4a44dfd11011a0e4468647e69b_task_tag_finished; else echo 1 > $REMOTE_ROOT/39311cb4a536a5f13a8a53f6c5465d893eb88a2c_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 000.000416
+test $? -ne 0 && exit 1
+if [ ! -f 9d8ee71ff21dd9a5767abd51030ac916372c513b_task_tag_finished ] ;then
+   ( gmx grompp -maxwarn 1 1> gmx_grompp.log 2> gmx_grompp.log ) 1>>gmx_grompp.log 2>>gmx_grompp.log 
+  if test $? -eq 0; then touch 9d8ee71ff21dd9a5767abd51030ac916372c513b_task_tag_finished; else echo 1 > $REMOTE_ROOT/39311cb4a536a5f13a8a53f6c5465d893eb88a2c_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 000.000885
+test $? -ne 0 && exit 1
+if [ ! -f 9b370bee6935599d7eed927c0bcda33f3d2df322_task_tag_finished ] ;then
+   ( gmx grompp -maxwarn 1 1> gmx_grompp.log 2> gmx_grompp.log ) 1>>gmx_grompp.log 2>>gmx_grompp.log 
+  if test $? -eq 0; then touch 9b370bee6935599d7eed927c0bcda33f3d2df322_task_tag_finished; else echo 1 > $REMOTE_ROOT/39311cb4a536a5f13a8a53f6c5465d893eb88a2c_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 000.000883
+test $? -ne 0 && exit 1
+if [ ! -f a38a09896785c59b3245421a1febc5e0765fb8bb_task_tag_finished ] ;then
+   ( gmx grompp -maxwarn 1 1> gmx_grompp.log 2> gmx_grompp.log ) 1>>gmx_grompp.log 2>>gmx_grompp.log 
+  if test $? -eq 0; then touch a38a09896785c59b3245421a1febc5e0765fb8bb_task_tag_finished; else echo 1 > $REMOTE_ROOT/39311cb4a536a5f13a8a53f6c5465d893eb88a2c_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 000.000974
+test $? -ne 0 && exit 1
+if [ ! -f ce46e94ce45e48ecd12c04190cc86fb39abd52b0_task_tag_finished ] ;then
+   ( gmx grompp -maxwarn 1 1> gmx_grompp.log 2> gmx_grompp.log ) 1>>gmx_grompp.log 2>>gmx_grompp.log 
+  if test $? -eq 0; then touch ce46e94ce45e48ecd12c04190cc86fb39abd52b0_task_tag_finished; else echo 1 > $REMOTE_ROOT/39311cb4a536a5f13a8a53f6c5465d893eb88a2c_flag_if_job_task_fail;fi
+fi &
+wait 
+
+
+cd $REMOTE_ROOT
+test $? -ne 0 && exit 1
+
+wait
+FLAG_IF_JOB_TASK_FAIL=$(cat 39311cb4a536a5f13a8a53f6c5465d893eb88a2c_flag_if_job_task_fail)
+if test $FLAG_IF_JOB_TASK_FAIL -eq 0; then touch 39311cb4a536a5f13a8a53f6c5465d893eb88a2c_job_tag_finished; else exit 1;fi
+

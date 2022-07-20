@@ -1,0 +1,107 @@
+#!/bin/bash -l
+#SBATCH --parsable
+#SBATCH --nodes 1
+#SBATCH --ntasks-per-node 8
+#SBATCH --gres=gpu:1
+#SBATCH --partition GPU_2080Ti
+
+
+REMOTE_ROOT=/home/dongdong/wyz/rid-kit/examples/test_ala_drop/iter.000000/01.resMD/
+echo 0 > $REMOTE_ROOT/671f01efa8749e9f2fe39136a5ca20e2a1a2ed4e_flag_if_job_task_fail
+test $? -ne 0 && exit 1
+
+
+
+
+
+
+
+cd $REMOTE_ROOT
+cd 001.000975
+test $? -ne 0 && exit 1
+if [ ! -f 9cfe37d69ebc704e18b411dd5d71d2a4a8309578_task_tag_finished ] ;then
+   ( gmx mdrun -ntmpi 1 -nt 8 -plumed plumed.res.dat 1> gmx_mdrun.log 2> gmx_mdrun.log ) 1>>gmx_mdrun.log 2>>gmx_mdrun.log 
+  if test $? -eq 0; then touch 9cfe37d69ebc704e18b411dd5d71d2a4a8309578_task_tag_finished; else echo 1 > $REMOTE_ROOT/671f01efa8749e9f2fe39136a5ca20e2a1a2ed4e_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 000.000335
+test $? -ne 0 && exit 1
+if [ ! -f a8bf6de089406cb7c814a8d70e793461766c9d58_task_tag_finished ] ;then
+   ( gmx mdrun -ntmpi 1 -nt 8 -plumed plumed.res.dat 1> gmx_mdrun.log 2> gmx_mdrun.log ) 1>>gmx_mdrun.log 2>>gmx_mdrun.log 
+  if test $? -eq 0; then touch a8bf6de089406cb7c814a8d70e793461766c9d58_task_tag_finished; else echo 1 > $REMOTE_ROOT/671f01efa8749e9f2fe39136a5ca20e2a1a2ed4e_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 001.000800
+test $? -ne 0 && exit 1
+if [ ! -f 60157134d36cc3f139c781e0fdeaa703dc06ee7d_task_tag_finished ] ;then
+   ( gmx mdrun -ntmpi 1 -nt 8 -plumed plumed.res.dat 1> gmx_mdrun.log 2> gmx_mdrun.log ) 1>>gmx_mdrun.log 2>>gmx_mdrun.log 
+  if test $? -eq 0; then touch 60157134d36cc3f139c781e0fdeaa703dc06ee7d_task_tag_finished; else echo 1 > $REMOTE_ROOT/671f01efa8749e9f2fe39136a5ca20e2a1a2ed4e_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 000.000649
+test $? -ne 0 && exit 1
+if [ ! -f b979ddc5314bca3413fbd62405b39f7c6daea4b7_task_tag_finished ] ;then
+   ( gmx mdrun -ntmpi 1 -nt 8 -plumed plumed.res.dat 1> gmx_mdrun.log 2> gmx_mdrun.log ) 1>>gmx_mdrun.log 2>>gmx_mdrun.log 
+  if test $? -eq 0; then touch b979ddc5314bca3413fbd62405b39f7c6daea4b7_task_tag_finished; else echo 1 > $REMOTE_ROOT/671f01efa8749e9f2fe39136a5ca20e2a1a2ed4e_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 000.000807
+test $? -ne 0 && exit 1
+if [ ! -f 9273e2094dac3bd064c0a4f3c469ef69094c91c8_task_tag_finished ] ;then
+   ( gmx mdrun -ntmpi 1 -nt 8 -plumed plumed.res.dat 1> gmx_mdrun.log 2> gmx_mdrun.log ) 1>>gmx_mdrun.log 2>>gmx_mdrun.log 
+  if test $? -eq 0; then touch 9273e2094dac3bd064c0a4f3c469ef69094c91c8_task_tag_finished; else echo 1 > $REMOTE_ROOT/671f01efa8749e9f2fe39136a5ca20e2a1a2ed4e_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 001.000787
+test $? -ne 0 && exit 1
+if [ ! -f aa4cf8968b0ac86c91c47b87e9b6abaee7c48ad4_task_tag_finished ] ;then
+   ( gmx mdrun -ntmpi 1 -nt 8 -plumed plumed.res.dat 1> gmx_mdrun.log 2> gmx_mdrun.log ) 1>>gmx_mdrun.log 2>>gmx_mdrun.log 
+  if test $? -eq 0; then touch aa4cf8968b0ac86c91c47b87e9b6abaee7c48ad4_task_tag_finished; else echo 1 > $REMOTE_ROOT/671f01efa8749e9f2fe39136a5ca20e2a1a2ed4e_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 000.000042
+test $? -ne 0 && exit 1
+if [ ! -f e8d3b8b2168466a553ca97c15fd7a04494b43b9f_task_tag_finished ] ;then
+   ( gmx mdrun -ntmpi 1 -nt 8 -plumed plumed.res.dat 1> gmx_mdrun.log 2> gmx_mdrun.log ) 1>>gmx_mdrun.log 2>>gmx_mdrun.log 
+  if test $? -eq 0; then touch e8d3b8b2168466a553ca97c15fd7a04494b43b9f_task_tag_finished; else echo 1 > $REMOTE_ROOT/671f01efa8749e9f2fe39136a5ca20e2a1a2ed4e_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 000.000280
+test $? -ne 0 && exit 1
+if [ ! -f ee196413432e5c832932046340828e4fdadd5dac_task_tag_finished ] ;then
+   ( gmx mdrun -ntmpi 1 -nt 8 -plumed plumed.res.dat 1> gmx_mdrun.log 2> gmx_mdrun.log ) 1>>gmx_mdrun.log 2>>gmx_mdrun.log 
+  if test $? -eq 0; then touch ee196413432e5c832932046340828e4fdadd5dac_task_tag_finished; else echo 1 > $REMOTE_ROOT/671f01efa8749e9f2fe39136a5ca20e2a1a2ed4e_flag_if_job_task_fail;fi
+fi &
+wait 
+
+cd $REMOTE_ROOT
+cd 001.000669
+test $? -ne 0 && exit 1
+if [ ! -f 1b165d6b59d27e96dada028eb0317d1917049900_task_tag_finished ] ;then
+   ( gmx mdrun -ntmpi 1 -nt 8 -plumed plumed.res.dat 1> gmx_mdrun.log 2> gmx_mdrun.log ) 1>>gmx_mdrun.log 2>>gmx_mdrun.log 
+  if test $? -eq 0; then touch 1b165d6b59d27e96dada028eb0317d1917049900_task_tag_finished; else echo 1 > $REMOTE_ROOT/671f01efa8749e9f2fe39136a5ca20e2a1a2ed4e_flag_if_job_task_fail;fi
+fi &
+wait 
+
+
+cd $REMOTE_ROOT
+test $? -ne 0 && exit 1
+
+wait
+FLAG_IF_JOB_TASK_FAIL=$(cat 671f01efa8749e9f2fe39136a5ca20e2a1a2ed4e_flag_if_job_task_fail)
+if test $FLAG_IF_JOB_TASK_FAIL -eq 0; then touch 671f01efa8749e9f2fe39136a5ca20e2a1a2ed4e_job_tag_finished; else exit 1;fi
+

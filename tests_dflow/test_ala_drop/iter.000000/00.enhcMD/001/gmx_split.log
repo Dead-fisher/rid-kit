@@ -1,0 +1,59 @@
+Note that major changes are planned in future for trjconv, to improve usability and utility.
+Select group for output
+Selected 0: 'System'
+ Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar      Christian Blau   Viacheslav Bolnykh     Kevin Boyd    
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra       Alan Gray     
+  Gerrit Groenhof     Anca Hamuraru    Vincent Hindriksen  M. Eric Irrgang  
+  Aleksei Iupinov   Christoph Junghans     Joe Jordan     Dimitrios Karkoulis
+    Peter Kasson        Jiri Kraus      Carsten Kutzner      Per Larsson    
+  Justin A. Lemkul    Viveca Lindahl    Magnus Lundborg     Erik Marklund   
+    Pascal Merz     Pieter Meulenhoff    Teemu Murtola       Szilard Pall   
+    Sander Pronk      Roland Schulz      Michael Shirts    Alexey Shvetsov  
+   Alfons Sijbers     Peter Tieleman      Jon Vincent      Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2018, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx trjconv, version 2019.2
+Executable:   /home/dongdong/wyz/software/gromacs-2019.2-mod-2022/bin/gmx
+Data prefix:  /home/dongdong/wyz/software/gromacs-2019.2-mod-2022
+Working dir:  /home/dongdong/wyz/rid-kit/examples/test_ala_drop/iter.000000/00.enhcMD/001
+Command line:
+  gmx trjconv -sep -f traj.trr -o confs/conf.gro -vel
+
+Will write gro: Coordinate file in Gromos-87 format
+Reading file topol.tpr, VERSION 2019.2 (single precision)
+Reading file topol.tpr, VERSION 2019.2 (single precision)
+Group     0 (         System) has  1171 elements
+Group     1 (        Protein) has    22 elements
+Group     2 (      Protein-H) has    10 elements
+Group     3 (        C-alpha) has     1 elements
+Group     4 (       Backbone) has     5 elements
+Group     5 (      MainChain) has     7 elements
+Group     6 (   MainChain+Cb) has     8 elements
+Group     7 (    MainChain+H) has     9 elements
+Group     8 (      SideChain) has    13 elements
+Group     9 (    SideChain-H) has     3 elements
+Group    10 (    Prot-Masses) has    22 elements
+Group    11 (    non-Protein) has  1149 elements
+Group    12 (          Water) has  1149 elements
+Group    13 (            SOL) has  1149 elements
+Group    14 (      non-Water) has    22 elements
+Select a group: trr version: GMX_trn_file (single precision)
+Reading frame       0 time    0.000    ->  frame      0 time    0.000      Reading frame       1 time    0.050    ->  frame      1 time    0.050      Reading frame       2 time    0.100    ->  frame      2 time    0.100      Reading frame       3 time    0.150    ->  frame      3 time    0.150      Reading frame       4 time    0.200    ->  frame      4 time    0.200      Reading frame       5 time    0.250    ->  frame      5 time    0.250      Reading frame       6 time    0.300    ->  frame      6 time    0.300      Reading frame       7 time    0.350    ->  frame      7 time    0.350      Reading frame       8 time    0.400    ->  frame      8 time    0.400      Reading frame       9 time    0.450    ->  frame      9 time    0.450      Reading frame      10 time    0.500    ->  frame     10 time    0.500      Reading frame      11 time    0.550   Reading frame      12 time    0.600   Reading frame      13 time    0.650   Reading frame      14 time    0.700   Reading frame      15 time    0.750   Reading frame      16 time    0.800   Reading frame      17 time    0.850   Reading frame      18 time    0.900   Reading frame      19 time    0.950   Reading frame      20 time    1.000    ->  frame     20 time    1.000      Reading frame      30 time    1.500    ->  frame     30 time    1.500      Reading frame      40 time    2.000    ->  frame     40 time    2.000      Reading frame      50 time    2.500    ->  frame     50 time    2.500      Reading frame      60 time    3.000    ->  frame     60 time    3.000      Reading frame      70 time    3.500    ->  frame     70 time    3.500      Reading frame      80 time    4.000    ->  frame     80 time    4.000      Reading frame      90 time    4.500    ->  frame     90 time    4.500      Reading frame     100 time    5.000    ->  frame    100 time    5.000      Reading frame     110 time    5.500    ->  frame    110 time    5.500      Reading frame     120 time    6.000    ->  frame    120 time    6.000      Reading frame     130 time    6.500    ->  frame    130 time    6.500      Reading frame     140 time    7.000    ->  frame    140 time    7.000      Reading frame     150 time    7.500    ->  frame    150 time    7.500      Reading frame     160 time    8.000    ->  frame    160 time    8.000      Reading frame     170 time    8.500    ->  frame    170 time    8.500      Reading frame     180 time    9.000    ->  frame    180 time    9.000      Reading frame     190 time    9.500    ->  frame    190 time    9.500      Reading frame     200 time   10.000    ->  frame    200 time   10.000       ->  frame    210 time   10.500       ->  frame    220 time   11.000       ->  frame    230 time   11.500       ->  frame    240 time   12.000       ->  frame    250 time   12.500       ->  frame    260 time   13.000       ->  frame    270 time   13.500       ->  frame    280 time   14.000       ->  frame    290 time   14.500      Reading frame     300 time   15.000    ->  frame    300 time   15.000       ->  frame    310 time   15.500       ->  frame    320 time   16.000       ->  frame    330 time   16.500       ->  frame    340 time   17.000       ->  frame    350 time   17.500       ->  frame    360 time   18.000       ->  frame    370 time   18.500       ->  frame    380 time   19.000       ->  frame    390 time   19.500      Reading frame     400 time   20.000    ->  frame    400 time   20.000       ->  frame    410 time   20.500       ->  frame    420 time   21.000       ->  frame    430 time   21.500       ->  frame    440 time   22.000       ->  frame    450 time   22.500       ->  frame    460 time   23.000       ->  frame    470 time   23.500       ->  frame    480 time   24.000       ->  frame    490 time   24.500      Reading frame     500 time   25.000    ->  frame    500 time   25.000       ->  frame    510 time   25.500       ->  frame    520 time   26.000       ->  frame    530 time   26.500       ->  frame    540 time   27.000       ->  frame    550 time   27.500       ->  frame    560 time   28.000       ->  frame    570 time   28.500       ->  frame    580 time   29.000       ->  frame    590 time   29.500      Reading frame     600 time   30.000    ->  frame    600 time   30.000       ->  frame    610 time   30.500       ->  frame    620 time   31.000       ->  frame    630 time   31.500       ->  frame    640 time   32.000       ->  frame    650 time   32.500       ->  frame    660 time   33.000       ->  frame    670 time   33.500       ->  frame    680 time   34.000       ->  frame    690 time   34.500      Reading frame     700 time   35.000    ->  frame    700 time   35.000       ->  frame    710 time   35.500       ->  frame    720 time   36.000       ->  frame    730 time   36.500       ->  frame    740 time   37.000       ->  frame    750 time   37.500       ->  frame    760 time   38.000       ->  frame    770 time   38.500       ->  frame    780 time   39.000       ->  frame    790 time   39.500      Reading frame     800 time   40.000    ->  frame    800 time   40.000       ->  frame    810 time   40.500       ->  frame    820 time   41.000       ->  frame    830 time   41.500       ->  frame    840 time   42.000       ->  frame    850 time   42.500       ->  frame    860 time   43.000       ->  frame    870 time   43.500       ->  frame    880 time   44.000       ->  frame    890 time   44.500      Reading frame     900 time   45.000    ->  frame    900 time   45.000       ->  frame    910 time   45.500       ->  frame    920 time   46.000       ->  frame    930 time   46.500       ->  frame    940 time   47.000       ->  frame    950 time   47.500       ->  frame    960 time   48.000       ->  frame    970 time   48.500       ->  frame    980 time   49.000       ->  frame    990 time   49.500      Reading frame    1000 time   50.000    ->  frame   1000 time   50.000      Last frame       1000 time   50.000   
+
+
+GROMACS reminds you: "If You Want Something Done You Have to Do It Yourself" (Highlander II)
+

@@ -1,0 +1,108 @@
+{
+    "work_base": "/home/dongdong/wyz/rid-kit/examples/test_ala_drop/iter.000000/00.enhcMD/",
+    "machine": {
+        "batch_type": "Slurm",
+        "context_type": "LazyLocalContext",
+        "local_root": "./",
+        "remote_root": "./",
+        "remote_profile": {}
+    },
+    "resources": {
+        "number_node": 1,
+        "cpu_per_node": 4,
+        "gpu_per_node": 0,
+        "queue_name": "GPU_2080Ti",
+        "group_size": 1,
+        "custom_flags": [],
+        "strategy": {
+            "if_cuda_multi_devices": false,
+            "ratio_unfinished": 0.0
+        },
+        "para_deg": 1,
+        "module_purge": false,
+        "module_unload_list": [],
+        "module_list": [],
+        "source_list": [],
+        "envs": {},
+        "wait_time": 0,
+        "kwargs": {}
+    },
+    "forward_common_files": [],
+    "backward_common_files": [],
+    "belonging_jobs": [
+        {
+            "552142a9c1788ac92b75565295d47748d17a7c6a": {
+                "job_task_list": [
+                    {
+                        "command": "echo 0 | gmx trjconv -sep -f traj.trr -o confs/conf.gro -vel 1> gmx_split.log 2> gmx_split.log",
+                        "task_work_path": "001",
+                        "forward_files": [],
+                        "backward_files": [],
+                        "outlog": "gmx_split.log",
+                        "errlog": "gmx_split.log"
+                    }
+                ],
+                "resources": {
+                    "number_node": 1,
+                    "cpu_per_node": 4,
+                    "gpu_per_node": 0,
+                    "queue_name": "GPU_2080Ti",
+                    "group_size": 1,
+                    "custom_flags": [],
+                    "strategy": {
+                        "if_cuda_multi_devices": false,
+                        "ratio_unfinished": 0.0
+                    },
+                    "para_deg": 1,
+                    "module_purge": false,
+                    "module_unload_list": [],
+                    "module_list": [],
+                    "source_list": [],
+                    "envs": {},
+                    "wait_time": 0,
+                    "kwargs": {}
+                },
+                "job_state": 5,
+                "job_id": "200683",
+                "fail_count": 0
+            }
+        },
+        {
+            "e8fcba8be75f3d523a6dcf4d324e08db097bb69b": {
+                "job_task_list": [
+                    {
+                        "command": "echo 0 | gmx trjconv -sep -f traj.trr -o confs/conf.gro -vel 1> gmx_split.log 2> gmx_split.log",
+                        "task_work_path": "000",
+                        "forward_files": [],
+                        "backward_files": [],
+                        "outlog": "gmx_split.log",
+                        "errlog": "gmx_split.log"
+                    }
+                ],
+                "resources": {
+                    "number_node": 1,
+                    "cpu_per_node": 4,
+                    "gpu_per_node": 0,
+                    "queue_name": "GPU_2080Ti",
+                    "group_size": 1,
+                    "custom_flags": [],
+                    "strategy": {
+                        "if_cuda_multi_devices": false,
+                        "ratio_unfinished": 0.0
+                    },
+                    "para_deg": 1,
+                    "module_purge": false,
+                    "module_unload_list": [],
+                    "module_list": [],
+                    "source_list": [],
+                    "envs": {},
+                    "wait_time": 0,
+                    "kwargs": {}
+                },
+                "job_state": 5,
+                "job_id": "200684",
+                "fail_count": 0
+            }
+        }
+    ]
+}
