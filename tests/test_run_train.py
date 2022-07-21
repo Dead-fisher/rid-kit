@@ -53,4 +53,4 @@ class Test_RunTrain(unittest.TestCase):
     
         op_out1 = op.execute(op_in1)
 
-        self.assertEqual(0.05, 0.05)
+        self.assertTrue(op_out1["model"])

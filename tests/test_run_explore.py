@@ -26,7 +26,7 @@ import rid.utils
 
 class Test_MockedRunExplore(unittest.TestCase):
     def setUp(self):
-        self.taskname = "000"
+        self.taskname = "explored"
     
     def tearDown(self):
         ii=Path(self.taskname)
@@ -48,3 +48,6 @@ class Test_MockedRunExplore(unittest.TestCase):
             )
         op_out = op.execute(op_in)
         self.assertTrue(op_out["plm_out"])
+        self.assertTrue(op_out["md_log"])
+        self.assertTrue(op_out["trajectory"])
+        self.assertTrue(op_out["conf_out"])

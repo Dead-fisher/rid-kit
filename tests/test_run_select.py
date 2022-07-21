@@ -109,5 +109,10 @@ class Test_MockedRunSelect(unittest.TestCase):
         op_out2 = op.execute(op_in2)
         op_out3 = op.execute(op_in3)
 
-        self.assertEqual(0.05, 0.05)
+        self.assertTrue(op_out1["model_devi"])
+        self.assertTrue(op_out2["model_devi"])
+        self.assertTrue(op_out3["model_devi"])
+        self.assertTrue(op_out1["selected_indices"])
+        self.assertTrue(op_out2["selected_indices"])
+        self.assertTrue(op_out3["selected_indices"])
         self.assertRaises(RuntimeError, op.execute, op_in4)
