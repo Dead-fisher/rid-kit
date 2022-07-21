@@ -29,10 +29,10 @@ class Test_PrepSelect(unittest.TestCase):
         self.taskname = "000"
         self.datapath = "data"
     
-    # def tearDown(self):
-    #     ii = Path(self.taskname)
-    #     if ii.is_dir():
-    #         shutil.rmtree(ii)
+    def tearDown(self):
+        ii = Path(self.taskname)
+        if ii.is_dir():
+            shutil.rmtree(ii)
     
     def test(self):
         op = PrepSelect()
