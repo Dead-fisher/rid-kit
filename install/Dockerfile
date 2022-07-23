@@ -20,8 +20,8 @@ ENV CC=/usr/bin/gcc
 ENV CXX=/usr/bin/g++
 
 # Install Miniconda package manager.
-#RUN wget -O /root/miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-ADD Miniconda3-latest-Linux-x86_64.sh /root/
+RUN wget -O /root/miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+# ADD Miniconda3-latest-Linux-x86_64.sh /root/
 RUN bash /root/Miniconda3-latest-Linux-x86_64.sh -b -p /opt/conda
 RUN rm /root/Miniconda3-latest-Linux-x86_64.sh
 ENV PATH /opt/conda/bin:$PATH
@@ -33,12 +33,12 @@ RUN conda init bash && source /root/.bashrc \
     && conda install python=3.9 libtensorflow_cc=2.6.2=*cuda110* tensorflow=2.6.2=*cuda110* nccl -y
 
 # Solve library inconsistency
-#RUN source activate base && rm ${CONDA_PREFIX}/lib/libtinfo.so* && ln -s /usr/lib/x86_64-linux-gnu/libtinfo.so.6 ${CONDA_PREFIX}/lib/libtinfo.so.6 \
+RUN source activate base && rm ${CONDA_PREFIX}/lib/libtinfo.so* && ln -s /usr/lib/x86_64-linux-gnu/libtinfo.so.6 ${CONDA_PREFIX}/lib/libtinfo.so.6 \
     #&& rm ${CONDA_PREFIX}/lib/libcurl.so* && ln -s /usr/lib/x86_64-linux-gnu/libcurl.so.4 ${CONDA_PREFIX}/lib/libcurl.so.4
 
 # Compile Plumed from source
-#RUN wget -O ~/plumed-2.8.0.tgz https://github.com/plumed/plumed2/releases/download/v2.8.0/plumed-2.8.0.tgz
-ADD plumed-2.8.0.tgz /root/
+RUN wget -O ~/plumed-2.8.0.tgz https://github.com/plumed/plumed2/releases/download/v2.8.0/plumed-2.8.0.tgz
+#ADD plumed-2.8.0.tgz /root/
 COPY DeePFE.cpp /root/plumed-2.8.0/src/bias/
 RUN source activate base \
     && cd /root/plumed-2.8.0 \
@@ -55,8 +55,8 @@ ENV LD_LIBRARY_PATH "/opt/conda/lib:$LD_LIBRARY_PATH"
 ENV PLUMED_KERNEL "/opt/conda/lib/libplumedKernel.@SOEXT@"
 
 # Compile gromacs from source
-#RUN wget -O root/gromacs-2021.4.tar.gz https://github.com/gromacs/gromacs/archive/refs/tags/v2021.4.tar.gz --no-check-certificate
-ADD gromacs-2021.4.tar.gz /root/
+RUN wget -O root/gromacs-2021.4.tar.gz https://github.com/gromacs/gromacs/archive/refs/tags/v2021.4.tar.gz --no-check-certificate
+#ADD gromacs-2021.4.tar.gz /root/
 RUN source activate base && echo $PLUMED_KERNEL && ls $CONDA_PREFIX/lib/ | grep plumed \
     && cd /root/gromacs-2021.4 \
     && echo -e "3\n" | plumed patch -p \
