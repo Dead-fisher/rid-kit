@@ -34,7 +34,7 @@ RUN conda init bash && source /root/.bashrc \
 
 # Solve library inconsistency
 RUN source activate base && rm ${CONDA_PREFIX}/lib/libtinfo.so* && ln -s /usr/lib/x86_64-linux-gnu/libtinfo.so.6 ${CONDA_PREFIX}/lib/libtinfo.so.6 \
-    #&& rm ${CONDA_PREFIX}/lib/libcurl.so* && ln -s /usr/lib/x86_64-linux-gnu/libcurl.so.4 ${CONDA_PREFIX}/lib/libcurl.so.4
+    && rm ${CONDA_PREFIX}/lib/libcurl.so* && ln -s /usr/lib/x86_64-linux-gnu/libcurl.so.4 ${CONDA_PREFIX}/lib/libcurl.so.4
 
 # Compile Plumed from source
 RUN wget -O ~/plumed-2.8.0.tgz https://github.com/plumed/plumed2/releases/download/v2.8.0/plumed-2.8.0.tgz
