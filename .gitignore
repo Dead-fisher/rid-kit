@@ -7,3 +7,5 @@ dist
 build
 .gitignore
 tmp*
+.coverage
+./tests_dflow
