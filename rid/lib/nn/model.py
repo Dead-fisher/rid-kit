@@ -4,7 +4,11 @@
 import os
 import time
 import sys
-import tensorflow as tf
+try:
+    import tensorflow.compat.v1 as tf
+    tf.disable_v2_behavior()
+except ImportError:
+    import tensorflow as tf
 import numpy as np
 from tensorflow.python.ops import control_flow_ops
 from tensorflow.python.training import moving_averages

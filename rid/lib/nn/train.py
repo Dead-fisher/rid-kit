@@ -2,7 +2,11 @@
 # -*- coding: utf-8 -*-
 
 import argparse
-import tensorflow as tf
+try:
+    import tensorflow.compat.v1 as tf
+    tf.disable_v2_behavior()
+except ImportError:
+    import tensorflow as tf
 import numpy as np
 from rid.lib.nn.model import Reader, Model
 

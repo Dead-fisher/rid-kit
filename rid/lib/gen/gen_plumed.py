@@ -165,7 +165,7 @@ def general_plumed(TASK,
         ret += (make_deep_bias(cv_names))
         ret += "\n"
     elif TASK == "bf":
-        None
+        pass
     else:
         raise RuntimeError("unknow task: " + TASK)
     

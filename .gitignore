@@ -21,3 +21,4 @@ rid.egg-info
 examples/*chignolin
 examples/*log*
 examples/*debug*
+test
