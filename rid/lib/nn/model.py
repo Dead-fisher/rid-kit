@@ -354,7 +354,7 @@ class Model(object):
         else:
             init = None
         layer = self._one_layer(
-            inputs, self.n_neuron[0], drop_out_rate=self.drop_out_rate, name='layer_0', reuse=reuse, init=init)
+            inputs, self.n_neuron[0], name='layer_0', reuse=reuse, init=init, drop_out_rate=self.drop_out_rate)
         for ii in range(1, len(self.n_neuron)):
             if graph is not None:
                 init_t = [graph.get_tensor_by_name('load/layer_%s/matrix:0' % str(ii)),
@@ -369,11 +369,11 @@ class Model(object):
             else:
                 init = None
             if self.resnet and self.n_neuron[ii] == self.n_neuron[ii-1]:
-                layer += self._one_layer(layer, self.n_neuron[ii], drop_out_rate=self.drop_out_rate, name='layer_'+str(
-                    ii), reuse=reuse, with_timestep=True, init=init)
+                layer += self._one_layer(layer, self.n_neuron[ii], name='layer_'+str(
+                    ii), reuse=reuse, with_timestep=True, init=init, drop_out_rate=self.drop_out_rate)
             else:
                 layer = self._one_layer(
-                    layer, self.n_neuron[ii], drop_out_rate=self.drop_out_rate, name='layer_'+str(ii), reuse=reuse, with_timestep=False, init=init)
+                    layer, self.n_neuron[ii], name='layer_'+str(ii), reuse=reuse, with_timestep=False, init=init, drop_out_rate=self.drop_out_rate)
         if graph is not None:
             init_t = graph.get_tensor_by_name('load/energy/matrix:0')
             with tf.Session(graph=self.graph) as g_sess:
@@ -428,7 +428,8 @@ class Model(object):
                    name='linear',
                    reuse=None,
                    seed=None,
-                   with_timestep=False):
+                   with_timestep=False,
+                   drop_out_rate=0.5):
         with tf.variable_scope(name, reuse=reuse):
             shape = inputs.get_shape().as_list()
             if init is not None:
